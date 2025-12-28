@@ -7,8 +7,84 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <h2 id="question"></h2>
+    <button id="answer1"></button><br>
+    <button id="answer2"></button><br>
+    <button id="answer3"></button><br>
+    <button id="answer4"></button>
+
+    
     <script>
-        
+        let question = document.querySelector("#question");
+        let answer1 = document.querySelector("#answer1");
+        let answer2 = document.querySelector("#answer2");
+        let answer3 = document.querySelector("#answer3");
+        let answer4 = document.querySelector("#answer4");
+
+        let c = 0, cpp = 0, java = 0, python = 0, html_css_js = 0, chatgpt = 0;
+        let question_select = 0; 
+
+        function Question1() {
+            question_select = 1; 
+            question.textContent = "Q1. 내가 공부를 할 때의 모습과 가장 가까운 것은?";
+            answer1.textContent = "느리더라도 기초부터 탄탄히 하는 것이 중요해.";
+            answer2.textContent = "중요한 부분을 집중적으로 보면서 공부해야 해.";
+            answer3.textContent = "내가 보기 쉽게 노트에 정리해야 해";
+            answer4.textContent = "공부를 왜 해? 생성형 AI에게 시키면 되지";
+        }
+
+        function Question2() {
+            question_select = 2; 
+            question.textContent = "Q2. 학교에서 내가 좋아하는 과목은?"
+            answer1.textContent = "국어, 영어";
+            answer2.textContent = "수학, 과학";
+            answer3.textContent = "체육";
+            answer4.textContent = "음악, 미술";
+        }
+
+        function Question3() {
+            question_select = 3; 
+            question.textContent = "Q3. ~~"
+        }
+
+        // 1번 선택지
+        answer1.addEventListener("click", () => {
+            if (question_select === 1) {
+                c++; Question2();
+            } else if (question_select === 2) {
+                java++; Question3(); 
+            }
+        });  
+
+        // 2번 선택지
+        answer2.addEventListener("click", () => {
+            if (question_select === 1) {
+                cpp++; java++; Question2();
+            } else if (question_select === 2) {
+                c++; cpp++; Question3();
+            }
+        });  
+
+        // 3번 선택지
+        answer3.addEventListener("click", () => {
+            if (question_select === 1) {
+                python++; html_css_js++; Question2();
+            } else if (question_select === 2) {
+                chatgpt++; Question3();
+            }
+        });  
+
+        // 4번 선택지 
+        answer4.addEventListener("click", () => {
+            if (question_select === 1) {
+                chatgpt++; Question2();
+            } else if (question_select === 2) {
+                python++; html_css_js++; Question3();
+            }
+        });  
+
+        Question1();
+
     </script>
 </body>
 </html>
