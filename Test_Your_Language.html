@@ -13,7 +13,6 @@
     <button id="answer3"></button><br>
     <button id="answer4"></button>
 
-    
     <script>
         let question = document.querySelector("#question");
         let answer1 = document.querySelector("#answer1");
@@ -44,7 +43,15 @@
 
         function Question3() {
             question_select = 3; 
-            question.textContent = "Q3. ~~"
+            question.textContent = "Q3. 게임을 할 때, 나의 플레이 방식은?";
+            answer1.textContent = "무조건 스토리를 따라가며 정석 루트~";
+            answer2.textContent = "스토리는 모르겠고, 이리저리 돌아다니면서 자유로운 모험!";
+            answer3.textContent = "어라, 여긴 어디지? 미니맵을 열고 다니는 트레저 헌터";
+            answer4.textContent = "나보다 잘하는 친구에게 도움을 받으며 성장 라이프:D";
+        }
+
+        function Question4() {
+
         }
 
         // 1번 선택지
@@ -53,6 +60,8 @@
                 c++; Question2();
             } else if (question_select === 2) {
                 java++; Question3(); 
+            } else if (question_select === 3) {
+                c++; Question4();
             }
         });  
 
@@ -62,6 +71,8 @@
                 cpp++; java++; Question2();
             } else if (question_select === 2) {
                 c++; cpp++; Question3();
+            } else if (question_select === 3) {
+                c++; java++; python++;
             }
         });  
 
@@ -71,6 +82,8 @@
                 python++; html_css_js++; Question2();
             } else if (question_select === 2) {
                 chatgpt++; Question3();
+            } else if (question_select === 3) {
+                html_css_js++;
             }
         });  
 
@@ -80,11 +93,12 @@
                 chatgpt++; Question2();
             } else if (question_select === 2) {
                 python++; html_css_js++; Question3();
+            } else if (question_select === 3) {
+                chatgpt++;
             }
         });  
 
         Question1();
-
     </script>
 </body>
 </html>
