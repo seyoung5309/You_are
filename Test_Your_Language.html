@@ -59,6 +59,10 @@
             answer4.textContent = "사람들에게 재미를 주는 게임 개발 기업";
         }
 
+        function Question5() {
+            
+        }
+
         // 1번 선택지
         answer1.addEventListener("click", () => {
             if (question_select === 1) {
@@ -67,6 +71,8 @@
                 java++; Question3(); 
             } else if (question_select === 3) {
                 c++; Question4();
+            } else if (question_select === 4) {
+                c++; cpp++; Question5();
             }
         });  
 
@@ -77,7 +83,9 @@
             } else if (question_select === 2) {
                 c++; cpp++; Question3();
             } else if (question_select === 3) {
-                c++; java++; python++;
+                c++; java++; python++; Question4();
+            } else if (question_select === 4) {
+                java++; html_css_js++; Question5();
             }
         });  
 
@@ -88,7 +96,9 @@
             } else if (question_select === 2) {
                 chatgpt++; Question3();
             } else if (question_select === 3) {
-                html_css_js++;
+                html_css_js++; Question4();
+            } else if (question_select === 4) {
+                python++; chatgpt++; Question5();
             }
         });  
 
@@ -99,7 +109,9 @@
             } else if (question_select === 2) {
                 python++; html_css_js++; Question3();
             } else if (question_select === 3) {
-                chatgpt++;
+                chatgpt++; Question4();
+            } else if (question_select === 4) {
+                c++; cpp++; Question5();
             }
         });  
 
