@@ -23,7 +23,9 @@
         let c = 0, cpp = 0, java = 0, python = 0, html_css_js = 0, chatgpt = 0;
         let question_select = 0; 
 
-        function Question1() {
+        result();
+
+        async function Question1() {
             question_select = 1; 
             question.textContent = "Q1. 내가 공부를 할 때의 모습과 가장 가까운 것은?";
             answer1.textContent = "느리더라도 기초부터 탄탄히 하는 것이 중요해.";
@@ -32,7 +34,7 @@
             answer4.textContent = "공부를 왜 해? 생성형 AI에게 시키면 되지";
         }
 
-        function Question2() {
+        async function Question2() {
             question_select = 2; 
             question.textContent = "Q2. 학교에서 내가 좋아하는 과목은?"
             answer1.textContent = "국어, 영어";
@@ -41,7 +43,7 @@
             answer4.textContent = "음악, 미술";
         }
 
-        function Question3() {
+        async function Question3() {
             question_select = 3; 
             question.textContent = "Q3. 게임을 할 때, 나의 플레이 방식은?";
             answer1.textContent = "무조건 스토리를 따라가며 정석 루트~";
@@ -50,7 +52,7 @@
             answer4.textContent = "나보다 잘하는 친구에게 도움을 받으며 성장 라이프:D";
         }
 
-        function Question4() {
+        async function Question4() {
             question_select = 4; 
             question.textContent = "Q4. 만약 나중에 취업하게 된다면 어떤 회사에?";
             answer1.textContent = "삼성과 Kt와 같은 시스템 소프트웨어 기업";
@@ -59,8 +61,71 @@
             answer4.textContent = "사람들에게 재미를 주는 게임 개발 기업";
         }
 
-        function Question5() {
-            
+        async function Question5() {
+            question_select = 5;
+            question.textContent = "Q5. 친구의 코드에서 오류는 아니지만 불편한 오타를 발견했다! 어떻게 할까?";
+            answer1.textContent = "친구가 알아서 하겠지~, 무시한다."; 
+            answer2.textContent = "조심스럽게 그 코드의 의도를 물어본다."; 
+            answer3.textContent = "불편한 부분을 지적하며 이유를 설명한다."; 
+            answer4.textContent = "내 판단이 맞는지 모르겠으니 생성형 AI에게 물어본다.";
+        }
+
+        async function Question6() {
+            // 문항 6
+            question_select = 6;
+            question.textContent = "Q6. ?";
+            answer1.textContent = "";
+            answer2.textContent = "";
+            answer3.textContent = "";
+            answer4.textContent = "";            
+        }
+
+        async function Question7() {
+            // 문항 7
+            question_select = 7;
+            question.textContent = "Q7. ?";
+            answer1.textContent = "";
+            answer2.textContent = "";
+            answer3.textContent = "";
+            answer4.textContent = "";            
+        }
+
+        async function Question8() {
+            // 문항 8
+            question_select = 8;
+            question.textContent = "Q8. ?";
+            answer1.textContent = "";
+            answer2.textContent = "";
+            answer3.textContent = "";
+            answer4.textContent = "";            
+        }
+
+        async function Question9() {
+            // 문항 9
+            question_select = 9;
+            question.textContent = "Q9. ?";
+            answer1.textContent = "";
+            answer2.textContent = "";
+            answer3.textContent = "";
+            answer4.textContent = "";            
+        }
+
+        async function Question10() {
+            // 문항 10
+            question_select = 10;
+            question.textContent = "Q10. ?";
+            answer1.textContent = "";
+            answer2.textContent = "";
+            answer3.textContent = "";
+            answer4.textContent = "";
+        }
+
+        // console.log(c+" "+cpp+" "+java+" "+python+" "+html_css_js+" "+chatgpt);
+
+        async function result() {
+            if (question_select === 10) {
+                console.log(c+" "+cpp+" "+java+" "+python+" "+html_css_js+" "+chatgpt);
+            }
         }
 
         // 1번 선택지
@@ -73,6 +138,8 @@
                 c++; Question4();
             } else if (question_select === 4) {
                 c++; cpp++; Question5();
+            } else if (question_select === 5) {
+                html_css_js++; Question6();
             }
         });  
 
@@ -86,6 +153,8 @@
                 c++; java++; python++; Question4();
             } else if (question_select === 4) {
                 java++; html_css_js++; Question5();
+            } else if (question_select === 5) {
+                java++; python++; Question6();
             }
         });  
 
@@ -99,6 +168,8 @@
                 html_css_js++; Question4();
             } else if (question_select === 4) {
                 python++; chatgpt++; Question5();
+            } else if (question_select === 5) {
+                c++; cpp++; Question6();
             }
         });  
 
@@ -112,6 +183,8 @@
                 chatgpt++; Question4();
             } else if (question_select === 4) {
                 c++; cpp++; Question5();
+            } else if (question_select === 5) {
+                chatgpt++; Question6();
             }
         });  
 
