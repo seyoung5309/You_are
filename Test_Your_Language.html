@@ -27,8 +27,6 @@
         let c = 0, cpp = 0, java = 0, python = 0, html_css_js = 0, chatgpt = 0;
         let question_select = 0; 
 
-        result();
-
         async function Question1() {
             question_select = 1; 
             updateProgress();
@@ -100,18 +98,16 @@
         }
 
         async function Question8() {
-            // 문항 8
             question_select = 8;
             updateProgress();        
-            question.textContent = "Q8. ?";
-            answer1.textContent = "";
-            answer2.textContent = "";
-            answer3.textContent = "";
-            answer4.textContent = "";            
+            question.textContent = "Q8. 코딩할 때의 나와 가까운 것은?";
+            answer1.textContent = "세미콜론과 괄호를 무조건 넣고, 모두 손으로 작성하는";
+            answer2.textContent = "적당히 자동 완성을 활용하여 코드를 작성하는";
+            answer3.textContent = "생략할 수 있는 건 생략하고, 자동 완성을 활용하는";
+            answer4.textContent = "AI, 딸깍.";            
         }
 
         async function Question9() {
-            // 문항 9
             question_select = 9;
             updateProgress();        
             question.textContent = "Q9. ?";
@@ -123,8 +119,8 @@
 
         async function Question10() {
             // 문항 10
-            question_select = 10;
-            updateProgress();        
+            question_select = 10;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+            updateProgress();      
             question.textContent = "Q10. ?";
             answer1.textContent = "";
             answer2.textContent = "";
@@ -132,12 +128,43 @@
             answer4.textContent = "";
         }
 
-        // console.log(c+" "+cpp+" "+java+" "+python+" "+html_css_js+" "+chatgpt);
-
         async function result() {
-            if (question_select === 10) {
-                console.log(c+" "+cpp+" "+java+" "+python+" "+html_css_js+" "+chatgpt);
+            progressBar.style.width = "100%";
+
+            // 삭제 
+            answer1.remove();
+            answer2.remove();
+            answer3.remove();
+            answer4.remove();
+
+            // 계산 
+            let score = 0; let language = "hello world!";
+            if (score < c) {
+                score = c; language = 'c';
             }
+            if (score < cpp) {
+                score = cpp; language = 'cpp';
+            }
+            if (score < java) {
+                score = java; language = 'java';
+            }
+            if (score < python) {
+                score = python; language = 'python';
+            }
+            if (score < html_css_js) {
+                score = html_css_js; language = 'html_css_js';
+            }
+            if (score < chatgpt) {
+                score = chatgpt; language = 'chatgpt';
+            }
+
+            question.innerHTML = `
+                <h2>결과 🎉</h2>
+                <p>당신은 ${language} 언어와 잘 어울립니다!</p>
+            `;
+
+            console.log(c+" "+cpp+" "+java+" "+python+" "+html_css_js+" "+chatgpt);
+            console.log("당신은 "+language+" 언어와 잘 어울립니다!");
         }
 
         // 1번 선택지
@@ -156,6 +183,12 @@
                 c++; cpp++; Question7();
             } else if (question_select === 7) {
                 c++; cpp++; Question8();
+            } else if (question_select === 8) {
+                c++; cpp++; Question9();
+            } else if (question_select === 9) {
+                Question10();
+            } else {
+                result();
             }
         });  
 
@@ -175,6 +208,12 @@
                 html_css_js++; python++; Question7();
             } else if (question_select === 7) {
                 java++; Question8();
+            } else if (question_select === 8) {
+                java++; Question9();
+            } else if (question_select === 9) {
+                Question10();
+            } else {
+                result();
             }
         });  
 
@@ -194,6 +233,12 @@
                 java++; Question7();
             } else if (question_select === 7) {
                 python++; html_css_js++; Question8();
+            } else if (question_select === 8) {
+                python++; html_css_js++; Question9();
+            } else if (question_select === 9) {
+                Question10();
+            } else {
+                result();
             }
         });  
 
@@ -213,6 +258,12 @@
                 chatgpt++; Question7();
             } else if (question_select === 7) {
                 chatgpt++; Question8();
+            } else if (question_select === 8) {
+                chatgpt++; Question9();
+            } else if (question_select === 9) {
+                Question10();
+            } else {
+                result();
             }
         });  
 
