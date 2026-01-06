@@ -82,22 +82,21 @@
         async function Question6() {
             question_select = 6;
             updateProgress();        
-            question.textContent = "Q6. ?";
-            answer1.textContent = "";
-            answer2.textContent = "";
-            answer3.textContent = "";
-            answer4.textContent = "";            
+            question.textContent = "Q6. 나는 주로 모둠에서 어떤 역할?";
+            answer1.textContent = "계획을 세우고 팀을 조율하는 리더";
+            answer2.textContent = "화려한 언변으로 시선을 주목시키는 발표자"; 
+            answer3.textContent = "뒤에서 묵묵히 자료 조사하는 유능한 조력자"; 
+            answer4.textContent = "생성형 AI와 함께 다양한 일을 처리하는 올라운더";         
         }
 
         async function Question7() {
-            // 문항 7
             question_select = 7;
             updateProgress();        
-            question.textContent = "Q7. ?";
-            answer1.textContent = "";
-            answer2.textContent = "";
-            answer3.textContent = "";
-            answer4.textContent = "";            
+            question.textContent = "Q7. 갑자기 컴퓨터가 고장이 났다면?";
+            answer1.textContent = "A/S 센터에 연락하거나 방문하여 수리를 문의한다."; 
+            answer2.textContent = "주변인 중에 고칠 수 있는 사람이 있는지 찾아본다.";
+            answer3.textContent = "망가졌으니 이 참에 못해본 노트북 부수기나 꾸미기를 해본다.";
+            answer4.textContent = "생성형 AI에게 고치는 법에 대해 물어본다.";            
         }
 
         async function Question8() {
@@ -153,6 +152,10 @@
                 c++; cpp++; Question5();
             } else if (question_select === 5) {
                 html_css_js++; Question6();
+            } else if (question_select === 6) {
+                c++; cpp++; Question7();
+            } else if (question_select === 7) {
+                c++; cpp++; Question8();
             }
         });  
 
@@ -168,6 +171,10 @@
                 java++; html_css_js++; Question5();
             } else if (question_select === 5) {
                 java++; python++; Question6();
+            } else if (question_select === 6) {
+                html_css_js++; python++; Question7();
+            } else if (question_select === 7) {
+                java++; Question8();
             }
         });  
 
@@ -183,6 +190,10 @@
                 python++; chatgpt++; Question5();
             } else if (question_select === 5) {
                 c++; cpp++; Question6();
+            } else if (question_select === 6) {
+                java++; Question7();
+            } else if (question_select === 7) {
+                python++; html_css_js++; Question8();
             }
         });  
 
@@ -198,6 +209,10 @@
                 c++; cpp++; Question5();
             } else if (question_select === 5) {
                 chatgpt++; Question6();
+            } else if (question_select === 6) {
+                chatgpt++; Question7();
+            } else if (question_select === 7) {
+                chatgpt++; Question8();
             }
         });  
 
