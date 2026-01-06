@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
     <h2 id="question"></h2>
     <button id="answer1"></button><br>
     <button id="answer2"></button><br>
@@ -27,6 +31,7 @@
 
         async function Question1() {
             question_select = 1; 
+            updateProgress();
             question.textContent = "Q1. 내가 공부를 할 때의 모습과 가장 가까운 것은?";
             answer1.textContent = "느리더라도 기초부터 탄탄히 하는 것이 중요해.";
             answer2.textContent = "중요한 부분을 집중적으로 보면서 공부해야 해.";
@@ -36,6 +41,7 @@
 
         async function Question2() {
             question_select = 2; 
+            updateProgress();        
             question.textContent = "Q2. 학교에서 내가 좋아하는 과목은?"
             answer1.textContent = "국어, 영어";
             answer2.textContent = "수학, 과학";
@@ -44,7 +50,8 @@
         }
 
         async function Question3() {
-            question_select = 3; 
+            question_select = 3;
+            updateProgress();         
             question.textContent = "Q3. 게임을 할 때, 나의 플레이 방식은?";
             answer1.textContent = "무조건 스토리를 따라가며 정석 루트~";
             answer2.textContent = "스토리는 모르겠고, 이리저리 돌아다니면서 자유로운 모험!";
@@ -54,6 +61,7 @@
 
         async function Question4() {
             question_select = 4; 
+            updateProgress();        
             question.textContent = "Q4. 만약 나중에 취업하게 된다면 어떤 회사에?";
             answer1.textContent = "삼성과 Kt와 같은 시스템 소프트웨어 기업";
             answer2.textContent = "네이버와 카카오와 같은 웹과 앱 기업";
@@ -63,6 +71,7 @@
 
         async function Question5() {
             question_select = 5;
+            updateProgress();        
             question.textContent = "Q5. 친구의 코드에서 오류는 아니지만 불편한 오타를 발견했다! 어떻게 할까?";
             answer1.textContent = "친구가 알아서 하겠지~, 무시한다."; 
             answer2.textContent = "조심스럽게 그 코드의 의도를 물어본다."; 
@@ -72,6 +81,7 @@
 
         async function Question6() {
             question_select = 6;
+            updateProgress();        
             question.textContent = "Q6. ?";
             answer1.textContent = "";
             answer2.textContent = "";
@@ -82,6 +92,7 @@
         async function Question7() {
             // 문항 7
             question_select = 7;
+            updateProgress();        
             question.textContent = "Q7. ?";
             answer1.textContent = "";
             answer2.textContent = "";
@@ -92,6 +103,7 @@
         async function Question8() {
             // 문항 8
             question_select = 8;
+            updateProgress();        
             question.textContent = "Q8. ?";
             answer1.textContent = "";
             answer2.textContent = "";
@@ -102,6 +114,7 @@
         async function Question9() {
             // 문항 9
             question_select = 9;
+            updateProgress();        
             question.textContent = "Q9. ?";
             answer1.textContent = "";
             answer2.textContent = "";
@@ -112,6 +125,7 @@
         async function Question10() {
             // 문항 10
             question_select = 10;
+            updateProgress();        
             question.textContent = "Q10. ?";
             answer1.textContent = "";
             answer2.textContent = "";
@@ -187,6 +201,15 @@
             }
         });  
 
+        const TOTAL_QUESTION = 10;
+        const progressBar = document.querySelector("#progressBar");
+
+        function updateProgress() {
+            const percent = (question_select - 1) / TOTAL_QUESTION * 100;
+            progressBar.style.width = percent + "%";
+        }
+
+        updateProgress();
         Question1();
     </script>
 </body>

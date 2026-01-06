@@ -20,3 +20,19 @@ button:hover {
     box-shadow: 0 5px 5px rgba(0,0,0,0.3);
     transition: box-shadow 0.2s ease;
 }
+
+.progress-container {
+    width: 300px;
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background: #EBF7FF;
+    transition: width 0.4s ease;
+}
