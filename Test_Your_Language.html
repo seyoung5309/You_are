@@ -118,14 +118,13 @@
         }
 
         async function Question10() {
-            // 문항 10
             question_select = 10;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
             updateProgress();      
-            question.textContent = "Q10. ?";
-            answer1.textContent = "";
-            answer2.textContent = "";
-            answer3.textContent = "";
-            answer4.textContent = "";
+            question.textContent = "Q10. 모두가 잠든 시각, 나는?";
+            answer1.textContent = "작은 불빛을 비추고 해야할 일을 끝내고 있다.";
+            answer2.textContent = "일단 내일의 나에게 맡기고 잠을 잔다.";
+            answer3.textContent = "친구에게 어려운 점을 물어본다.";
+            answer4.textContent = "생성형 AI를 여러 개 켜두고 자동사냥을 돌린다.";
         }
 
         async function result() {
@@ -188,7 +187,7 @@
             } else if (question_select === 9) {
                 c++; Question10();
             } else {
-                result();
+                c++; cpp++; result();
             }
         });  
 
@@ -213,7 +212,7 @@
             } else if (question_select === 9) {
                 python++; html_css_js++; Question10();
             } else {
-                result();
+                python++; html_css_js++; result();
             }
         });  
 
@@ -238,7 +237,7 @@
             } else if (question_select === 9) {
                 cpp++; java++; Question10();
             } else {
-                result();
+                java++; result();
             }
         });  
 
@@ -263,7 +262,7 @@
             } else if (question_select === 9) {
                 chatgpt++; Question10();
             } else {
-                result();
+                chatgpt++; result();
             }
         });  
 
