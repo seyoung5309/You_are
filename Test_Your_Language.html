@@ -110,11 +110,11 @@
         async function Question9() {
             question_select = 9;
             updateProgress();        
-            question.textContent = "Q9. ?";
-            answer1.textContent = "";
-            answer2.textContent = "";
-            answer3.textContent = "";
-            answer4.textContent = "";            
+            question.textContent = "Q9. 학교에서 수업 시간에 나는?";
+            answer1.textContent = "최대한 모든 내용을 이해하기 위해 노력한다."; // c
+            answer2.textContent = "게임이나 낙서와 같은 딴짓을 하며 논다."; // python, html
+            answer3.textContent = "눈을 감았다 뜨면 학교가 끝나 있는다!"; // java, cpp
+            answer4.textContent = "내용은 모르겠으나, chatGPT한테 물어보면 되니 걱정없다!";  //chat      
         }
 
         async function Question10() {
@@ -186,7 +186,7 @@
             } else if (question_select === 8) {
                 c++; cpp++; Question9();
             } else if (question_select === 9) {
-                Question10();
+                c++; Question10();
             } else {
                 result();
             }
@@ -211,7 +211,7 @@
             } else if (question_select === 8) {
                 java++; Question9();
             } else if (question_select === 9) {
-                Question10();
+                python++; html_css_js++; Question10();
             } else {
                 result();
             }
@@ -236,7 +236,7 @@
             } else if (question_select === 8) {
                 python++; html_css_js++; Question9();
             } else if (question_select === 9) {
-                Question10();
+                cpp++; java++; Question10();
             } else {
                 result();
             }
@@ -261,7 +261,7 @@
             } else if (question_select === 8) {
                 chatgpt++; Question9();
             } else if (question_select === 9) {
-                Question10();
+                chatgpt++; Question10();
             } else {
                 result();
             }
